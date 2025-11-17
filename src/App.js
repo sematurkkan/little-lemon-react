@@ -15,12 +15,8 @@ function App() {
     <>
     <Header />
     <Nav />
-    {/* <Highlight/> */}
     <Main />
-    {/* <Testimonials/>
-    <About/> */}
     <Footer />
-
     </>
     </BrowserRouter>
   );
