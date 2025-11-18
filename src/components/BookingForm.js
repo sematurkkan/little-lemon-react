@@ -1,21 +1,6 @@
 import { useState } from 'react';
 
-function BookingForm() {
-  // Available times for reservation
-  const [availableTimes] = useState([
-    '17:00',
-    '17:30',
-    '18:00',
-    '18:30',
-    '19:00',
-    '19:30',
-    '20:00',
-    '20:30',
-    '21:00',
-    '21:30',
-    '22:00'
-  ]);
-
+function BookingForm({ availableTimes, onDateChange }) {
   // Form state variables
   const [formData, setFormData] = useState({
     date: '',
@@ -27,6 +12,12 @@ function BookingForm() {
   // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
+    // If date changed, call the onDateChange function
+    if (name === 'date') {
+      onDateChange(value);
+    }
+
     setFormData({
       ...formData,
       [name]: value

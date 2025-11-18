@@ -1,6 +1,6 @@
 import BookingForm from '../components/BookingForm';
 
-function BookingPage() {
+function BookingPage({ availableTimes, onDateChange }) {
   return (
     <main>
       <section className="booking-page">
@@ -8,7 +8,10 @@ function BookingPage() {
         <p className="booking-intro">
           Join us for an unforgettable dining experience. Reserve your table today!
         </p>
-        <BookingForm />
+        <BookingForm 
+          availableTimes={availableTimes}
+          onDateChange={onDateChange}
+        />
       </section>
     </main>
   );
