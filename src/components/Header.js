@@ -1,18 +1,16 @@
 import React from 'react';
 // import logo from './assets/LittleLemon1.png'
 
-const Header = () => {
+function Header() {
   return (
-    <header clasname="header">
-      {/* Add header content here */}
+    <header className="header" role="banner">
       <img 
-        src={"/assets/LittleLemon1.png"} 
-        alt="Little Lemon Logo"
+        src="/assets/LittleLemon1.png" 
+        alt="Little Lemon Logo - Mediterranean Restaurant" 
         className="logo"
       />
-
     </header>
   );
-};
+}
 
 export default Header;
